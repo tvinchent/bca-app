@@ -13,6 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install dependencies and build
+        run: |
+          # Replace with your actual build commands
+          npm install
+          npm run build
+
       - name: Set up FTP
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
@@ -20,3 +26,4 @@ jobs:
           username: ${{ secrets.FTP_LOGIN }}
           password: ${{ secrets.FTP_PWD }}
           server-dir: www/bca-app/  # Adjust this to your desired FTP path
+          local-dir: dist
