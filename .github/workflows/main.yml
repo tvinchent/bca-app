@@ -26,4 +26,4 @@ jobs:
           username: ${{ secrets.FTP_LOGIN }}
           password: ${{ secrets.FTP_PWD }}
           server-dir: www/bca-app/  # Adjust this to your desired FTP path
-          local-dir: dist
+          local-dir: dist/
