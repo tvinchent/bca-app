@@ -19,4 +19,4 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_LOGIN }}
           password: ${{ secrets.FTP_PWD }}
-          server-dir: /bca-app  # Adjust this to your desired FTP path
+          server-dir: /bca-app/  # Adjust this to your desired FTP path
