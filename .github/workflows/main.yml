@@ -1,0 +1,22 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to your main branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.ftp.cluster028.hosting.ovh.net }}
+          username: ${{ secrets.pictiok }}
+          password: ${{ secrets.carp310mIP }}
+          server-dir: /bca-app  # Adjust this to your desired FTP path
