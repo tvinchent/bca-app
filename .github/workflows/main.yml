@@ -16,7 +16,7 @@ jobs:
       - name: Set up FTP
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ${{ secrets.ftp.cluster028.hosting.ovh.net }}
-          username: ${{ secrets.pictiok }}
-          password: ${{ secrets.carp310mIP }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_LOGIN }}
+          password: ${{ secrets.FTP_PWD }}
           server-dir: /bca-app  # Adjust this to your desired FTP path
