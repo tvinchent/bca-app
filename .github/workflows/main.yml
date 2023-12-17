@@ -21,10 +21,11 @@ jobs:
           npm run build
 
       - name: Set up FTP
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_LOGIN }}
           password: ${{ secrets.FTP_PWD }}
-          server-dir: www/bca-app/  # Adjust this to your desired FTP path
+          server-dir: www/bca-app/ # Adjust this to your desired FTP path
           local-dir: dist/
