@@ -4,7 +4,7 @@ import Auth from "./components/Auth";
 const App = () => {
   return (
     <>
-      <h1>Vite Firebase App</h1>
+      <h1>BCA</h1>
       <Auth />
     </>
   );
