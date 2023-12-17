@@ -4,7 +4,7 @@ import Auth from "./components/Auth";
 const App = () => {
   return (
     <>
-      <h1>BCA</h1>
+      <h1>BCA app</h1>
       <Auth />
     </>
   );
