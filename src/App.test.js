@@ -6,16 +6,16 @@ test("adds 1 + 2 to equal 3", () => {
   expect(sum(1, 2)).toBe(3);
 });
 
-// import { describe, it } from "vitest";
+// import { describe, it, expect } from "vitest";
 // import { render, screen } from "@testing-library/react";
 
 // import App from "./App";
 
 // describe("App", () => {
-//   it("renders headline", () => {
+//   it("renders headline", async () => {
 //     render(<App />);
-
-//     screen.debug();
+//     screen.findByText("BCA");
+//     expect(await screen.findByText(/BCA/)).toBeInTheDocument();
 //   });
 // });
 
